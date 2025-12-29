@@ -1,0 +1,154 @@
+.profile-hero {
+  background: linear-gradient(90deg, #4f79ff, #6b8dff);
+  padding-bottom: 24rpx;
+}
+
+.nav-right {
+  margin-right: 16rpx;
+}
+
+.capsule {
+  height: 52rpx;
+  width: 96rpx;
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10rpx;
+}
+
+.capsule-dot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.profile-card {
+  margin: 20rpx 24rpx 0;
+  padding: 20rpx 24rpx;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  animation: riseIn 0.5s ease both;
+}
+
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #4f79ff;
+  font-size: 36rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+
+.profile-info {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.dept {
+  margin-top: 6rpx;
+  font-size: 22rpx;
+  opacity: 0.9;
+}
+
+.phone {
+  margin-top: 4rpx;
+  font-size: 22rpx;
+  opacity: 0.85;
+}
+
+.list {
+  margin: 20rpx 24rpx 0;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 10rpx 20rpx rgba(45, 66, 109, 0.08);
+  animation: riseIn 0.6s ease both;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 20rpx;
+  border-bottom: 1rpx solid #eef0f5;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.item-icon {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 12rpx;
+  background: #e9efff;
+  color: #3b62ff;
+  font-size: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16rpx;
+}
+
+.item-text {
+  flex: 1;
+  font-size: 24rpx;
+  color: #2c3340;
+}
+
+.item-arrow {
+  width: 14rpx;
+  height: 14rpx;
+  border-top: 3rpx solid #c4c9d6;
+  border-right: 3rpx solid #c4c9d6;
+  transform: rotate(45deg);
+}
+
+.logout-btn {
+  margin: 80rpx 24rpx 0;
+  height: 84rpx;
+  border-radius: 42rpx;
+  background: #3b7cff;
+  color: #fff;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12rpx 24rpx rgba(59, 124, 255, 0.35);
+  animation: fadeIn 0.8s ease both;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(16rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

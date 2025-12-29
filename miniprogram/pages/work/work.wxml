@@ -1,0 +1,23 @@
+<view class="page">
+  <navigation-bar title="IT运维" back="{{false}}" color="#ffffff" background="linear-gradient(90deg,#4f79ff,#6b8dff)"></navigation-bar>
+
+  <view class="content">
+    <view class="tabs">
+      <view
+        class="tab {{activeTab === index ? 'active' : ''}}"
+        wx:for="{{tabs}}"
+        wx:key="name"
+        data-index="{{index}}"
+        bindtap="onTabChange"
+      >
+        {{item}}
+      </view>
+    </view>
+
+    <view class="empty">
+      <view class="empty-line"></view>
+      <text class="empty-text">没有更多数据了</text>
+      <view class="empty-line"></view>
+    </view>
+  </view>
+</view>

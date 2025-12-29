@@ -1,0 +1,37 @@
+<view class="page">
+  <navigation-bar title="IT运维" back="{{false}}" color="#ffffff" background="linear-gradient(90deg,#4f79ff,#6b8dff)"></navigation-bar>
+
+  <view class="content">
+    <view class="hero">
+      <view class="hero-title">智慧运维平台</view>
+      <view class="hero-subtitle">让工单与设备更高效</view>
+      <view class="hero-orbs">
+        <view class="orb orb-a"></view>
+        <view class="orb orb-b"></view>
+        <view class="orb orb-c"></view>
+      </view>
+    </view>
+
+    <view class="section" wx:for="{{sections}}" wx:for-item="section" wx:key="title">
+      <view class="section-header">
+        <view class="section-bar"></view>
+        <text class="section-title">{{section.title}}</text>
+      </view>
+      <view class="grid">
+        <view
+          class="grid-item"
+          wx:for="{{section.items}}"
+          wx:for-item="entry"
+          wx:key="name"
+          data-name="{{entry.name}}"
+          bindtap="onGridTap"
+        >
+          <view class="grid-icon" style="background: {{entry.color}};">
+            <text class="grid-icon-text">{{entry.short}}</text>
+          </view>
+          <text class="grid-label">{{entry.name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

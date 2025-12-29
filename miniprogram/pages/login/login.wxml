@@ -1,0 +1,43 @@
+<view class="page">
+  <navigation-bar title="IT运维" back="{{false}}" color="#ffffff" background="linear-gradient(90deg,#4f79ff,#6b8dff)"></navigation-bar>
+
+  <view class="content">
+    <view class="logo-card">
+      <view class="logo-circle">iT</view>
+      <text class="login-title">首次登录</text>
+      <text class="login-subtitle">请先验证身份信息</text>
+    </view>
+
+    <view class="login-tabs">
+      <view
+        class="login-tab {{activeTab === 0 ? 'active' : ''}}"
+        data-index="0"
+        bindtap="onTabChange"
+      >
+        工号/账号验证
+      </view>
+      <view
+        class="login-tab {{activeTab === 1 ? 'active' : ''}}"
+        data-index="1"
+        bindtap="onTabChange"
+      >
+        手机号验证
+      </view>
+    </view>
+
+    <view class="form-card">
+      <view class="input-row">
+        <view class="input-icon user-icon"></view>
+        <input class="input" placeholder="请输入账号" />
+      </view>
+      <view class="divider"></view>
+      <view class="input-row">
+        <view class="input-icon lock-icon"></view>
+        <input class="input" placeholder="请输入密码" password />
+      </view>
+    </view>
+
+    <view class="action-btn" bindtap="onLogin">验证</view>
+    <text class="help-text">服务号码：5900/83665900</text>
+  </view>
+</view>

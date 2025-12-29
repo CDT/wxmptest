@@ -1,0 +1,15 @@
+<cover-view class="tab-bar">
+  <cover-view
+    class="tab-item {{selected === tabIndex ? 'active' : ''}}"
+    wx:for="{{list}}"
+    wx:for-index="tabIndex"
+    wx:key="pagePath"
+    data-index="{{tabIndex}}"
+    data-path="{{item.pagePath}}"
+    bindtap="onSwitchTab"
+  >
+    <cover-image class="tab-icon" src="{{selected === tabIndex ? item.iconActive : item.icon}}"></cover-image>
+    <cover-view class="tab-text" style="color: {{selected === tabIndex ? '#5b7cfe' : '#9aa1ad'}};">{{item.text}}</cover-view>
+    <cover-view wx:if="{{item.badge}}" class="tab-badge">{{item.badge}}</cover-view>
+  </cover-view>
+</cover-view>

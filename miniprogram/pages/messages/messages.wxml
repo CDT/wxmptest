@@ -1,0 +1,35 @@
+<view class="page">
+  <navigation-bar title="IT运维" back="{{false}}" color="#ffffff" background="linear-gradient(90deg,#4f79ff,#6b8dff)"></navigation-bar>
+
+  <view class="content">
+    <view class="search-card">
+      <view class="search-icon"></view>
+      <input class="search-input" placeholder="输入关键字查询" />
+      <view class="search-filter"></view>
+    </view>
+
+    <view class="tabs">
+      <view
+        class="tab {{activeTab === index ? 'active' : ''}}"
+        wx:for="{{tabs}}"
+        wx:key="name"
+        data-index="{{index}}"
+        bindtap="onTabChange"
+      >
+        <text>{{item.name}}</text>
+        <view wx:if="{{item.badge}}" class="tab-badge">{{item.badge}}</view>
+      </view>
+    </view>
+
+    <view class="list">
+      <view class="list-item" wx:for="{{messages}}" wx:key="title">
+        <view class="dot"></view>
+        <view class="list-body">
+          <text class="list-title">{{item.title}}</text>
+          <text class="list-desc">{{item.desc}}</text>
+          <text class="list-time">{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

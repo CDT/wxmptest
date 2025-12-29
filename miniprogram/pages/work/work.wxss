@@ -1,0 +1,96 @@
+.nav-right {
+  margin-right: 16rpx;
+}
+
+.capsule {
+  height: 52rpx;
+  width: 96rpx;
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10rpx;
+}
+
+.capsule-dot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.tabs {
+  display: flex;
+  background: #fff;
+  margin: 16rpx 24rpx 0;
+  border-radius: 20rpx;
+  padding: 12rpx 0;
+  box-shadow: 0 10rpx 20rpx rgba(45, 66, 109, 0.08);
+  animation: fadeIn 0.4s ease both;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+  color: #8b93a2;
+  position: relative;
+}
+
+.tab.active {
+  color: #2f5eff;
+  font-weight: 600;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -12rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48rpx;
+  height: 6rpx;
+  border-radius: 4rpx;
+  background: #2f5eff;
+}
+
+.empty {
+  margin: 80rpx 24rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b3b8c2;
+  font-size: 22rpx;
+  animation: riseIn 0.6s ease both;
+}
+
+.empty-line {
+  flex: 1;
+  height: 1rpx;
+  background: #e6e9f2;
+}
+
+.empty-text {
+  padding: 0 16rpx;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(12rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
